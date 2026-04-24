@@ -104,7 +104,7 @@ El puerto host es un puerto aleatorio, que es el 32768
 **¿Qué es una imagen huérfana?**
 # COMPLETAR CON LA RESPUESTA
 
-Una imagen huérfana es una imagen de Docker que no tiene etiqueta (<none>) y no está asociada a ningún contenedor. Generalmente se genera como residuo de construcciones anteriores y puede eliminarse para liberar espacio.
+Una imagen huérfana es una imagen de Docker que no tiene etiqueta y no está asociada a ningún contenedor. Generalmente se genera como residuo de construcciones anteriores y puede eliminarse para liberar espacio.
 
 ### Identificar imágenes huérfanas
 ```
