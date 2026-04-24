@@ -58,3 +58,11 @@ Se reinicia únicamente cuando hay una falla en la ejecución del código que se
 ```
 docker run -d --name <nombre contenedor> --restart on-failure <nombre imagen>
 ```
+
+<img width="1108" height="500" alt="{FDB4D099-3274-476C-AF6A-7F8BA824D725}" src="https://github.com/user-attachments/assets/de9a2399-e294-48bb-aa5b-69a07ee6ac31" />
+
+<img width="1063" height="169" alt="{8EDA49A7-43B6-4E7C-BD38-42E87CCD6AC4}" src="https://github.com/user-attachments/assets/1042ff35-21b8-408d-bb6e-744bebad5598" />
+
+<img width="1145" height="625" alt="{31D178E8-5969-4050-B391-2178D3BCA3FE}" src="https://github.com/user-attachments/assets/a6d324bb-662e-4981-a7dc-836fdc01d812" />
+
+Se verificó la política on-failure utilizando un script que finaliza con código de error (exit 1). Se observó que el contenedor se reinicia automáticamente, lo cual se evidencia en el valor "RestartCount" que indica múltiples reinicios.
