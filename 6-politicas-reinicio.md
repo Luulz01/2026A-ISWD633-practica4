@@ -27,12 +27,19 @@ Reinicia siempre el contenedor si se detiene. Si se detiene manualmente, sólo s
 docker run -d --name <nombre contenedor> --restart always <nombre imagen>
 ```
 
-<img width="1100" height="471" alt="{0099D36A-4FAB-4A29-817F-A2DFCC54FD38}" src="https://github.com/user-attachments/assets/061fcb86-203e-485d-893d-42dc8e2c3468" />
+<img width="1144" height="437" alt="{A3AAED5B-235C-4BCA-9706-0F01C5F1ADA0}" src="https://github.com/user-attachments/assets/db925fbc-131d-483b-83cb-f37a8859da82" />
+
 
 **Politica de reinicio - always**
 <img width="813" height="61" alt="{C667F569-3175-47DC-B844-D6D2C78BF228}" src="https://github.com/user-attachments/assets/091f41aa-abe3-4c36-8680-09a9b83da0c5" />
 
-<img width="1048" height="168" alt="{2B931B11-5A79-47D0-8F5B-1B599E4DE945}" src="https://github.com/user-attachments/assets/eb0d3f2f-39c5-4a70-a9e6-cb1a093b07eb" />
+<img width="1092" height="103" alt="{7311950F-D96A-40E9-BC21-B239F255A4C5}" src="https://github.com/user-attachments/assets/e2594cc0-3071-4f08-a2c5-bb97af5b3487" />
+
+<img width="1138" height="749" alt="{97AC3923-A728-4E60-BEF2-AB495A80083B}" src="https://github.com/user-attachments/assets/923cda29-2061-41e4-9660-d206b5fb8a30" />
+
+Stop
+
+<img width="1049" height="213" alt="{7C590C6E-2E4E-4652-A10B-F749FCBF9C34}" src="https://github.com/user-attachments/assets/7830b29c-fe72-4acd-92f7-54f9d21c1138" />
 
 
 ### unless-stopped
