@@ -16,6 +16,10 @@ También aprendí la importancia del contexto de construcción, verificando que 
 - Identificación y solución de errores comunes (archivos faltantes, nombres incorrectos, rutas)
 - Uso de políticas de reinicio (no, always, unless-stopped, on-failure) y su comportamiento real
 - Limitación de recursos del contenedor, especialmente el uso de memoria RAM y memoria swap
+- no = No reinicia el contenedor bajo ninguna circunstancia (valor por defecto).
+- always = Reinicia siempre el contenedor, incluso si se reinicia Docker o el sistema.
+- unless-stopped = Reinicia el contenedor automáticamente, excepto si fue detenido manualmente.
+- on-failure = Solo reinicia el contenedor cuando ocurre un error (código de salida distinto de 0).
 
 ### Cálculo de memoria swap
 
