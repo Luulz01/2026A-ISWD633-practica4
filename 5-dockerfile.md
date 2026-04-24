@@ -49,21 +49,36 @@ docker build -t <nombre imagen>:<tag> .
 - apachectl: Es el script de control para el servidor web Apache. Se utiliza para iniciar, detener y controlar el servidor web.
 - -D FOREGROUND: Esta opción le dice a Apache que se ejecute en primer plano. Por defecto, Apache se ejecuta como un servicio en segundo plano. Sin embargo, en un contenedor Docker, es preferible que el proceso principal (en este caso, Apache) se ejecute en primer plano para que Docker pueda monitorear el estado del proceso. Si Apache se ejecutara en segundo plano, Docker no podría saber si el servidor web está funcionando correctamente o no.
 
+
  
 ### Ejecutar el archivo Dockerfile y construir una imagen en la versión 1.0
 No olvides verificar en qué directorio se encuentra el archivo Dockerfile
-```
 
-```
+<img width="529" height="291" alt="{58E05ED0-3C5A-4A56-BCE3-9EA88D23EABE}" src="https://github.com/user-attachments/assets/a9bdaeb0-7c12-45e6-8c55-3b851b1c3b0e" />
+
+
+
+**Dockerfile**
+<img width="1282" height="566" alt="{F1D6ACDF-2BC9-4B91-AA84-91C626A888CA}" src="https://github.com/user-attachments/assets/25a5d1e3-9fae-4c6d-9368-87c034f4f54b" />
+
 
 **¿Cuántos pasos se han ejecutado?**
 # RESPONDER 
+Se ejecutaron 7 pasos con la corrección respectiva que se realizó. Cada instrucción del Dockerfile genera una capa (layer) en la imagen.
 
 ### Inspeccionar la imagen creada
 # COMPLETAR CON UNA CAPTURA
 
+<img width="1227" height="538" alt="{278156A1-8A0D-4194-A164-B68752FD2D63}" src="https://github.com/user-attachments/assets/61b8b6c6-faf0-41f2-847f-cdc45e00fdf0" />
+
+
 **Modificar el archivo index.html para incluir su nombre y luego crear una nueva versión de la imagen anterior**
 **¿Cuántos pasos se han ejecutado? ¿Observa algo diferente en la creación de la imagen**
+Se ejecutó únicamente 1 paso el de COPY, debido a que que Docker utilizó el mecanismo de caché para reutilizar las capas previamente construidas. Se observa que los pasos anteriores aparecen como "CACHED".
+
+<img width="1282" height="510" alt="{8597762C-FCEE-49F9-829D-47D60B841A33}" src="https://github.com/user-attachments/assets/d8f13658-77ce-4733-baca-e5d0595e0db6" />
+
+Algo importante que mencionar es que el tiempo de ejecución fue mucho menor en este caso que en el anterior.
 
 ## Mecanismo de caché
 Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso de construcción y evitar la repetición de pasos que no han cambiado. Cada instrucción en un Dockerfile crea una capa en la imagen final. Docker intenta reutilizar las capas de una construcción anterior si no han cambiado, lo que reduce significativamente el tiempo de construcción.
@@ -74,15 +89,22 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 ![mapeo](img/dockerfile-cache.PNG)
 
 ### Crear un contenedor a partir de las imagen creada, mapear todos los puertos
-```
 
-```
+<img width="688" height="71" alt="{AAAE8595-F64A-49DE-B964-D14BCBBDEE59}" src="https://github.com/user-attachments/assets/1de48819-6930-4db5-aa41-0a1a2c2c2576" />
+
 
 ### ¿Con que puerto host se está realizando el mapeo?
+
+<img width="1261" height="67" alt="{3591E651-6BBB-4DA5-9ACB-FF09DCC5359F}" src="https://github.com/user-attachments/assets/de95dc32-cd3e-429b-a3ce-100d2d5b15d4" />
+
+
+El puerto host es un puerto aleatorio, que es el 32768
 # COMPLETAR CON LA RESPUESTA
 
 **¿Qué es una imagen huérfana?**
 # COMPLETAR CON LA RESPUESTA
+
+Una imagen huérfana es una imagen de Docker que no tiene etiqueta (<none>) y no está asociada a ningún contenedor. Generalmente se genera como residuo de construcciones anteriores y puede eliminarse para liberar espacio.
 
 ### Identificar imágenes huérfanas
 ```
