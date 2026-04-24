@@ -76,3 +76,5 @@ _Puedes copiar y ejecutar directamente el comando_
 ```
 docker run -d --name server-nginx --health-cmd="curl http://localhost" --health-interval=3s --health-start-period=5s --health-retries=3 --health-timeout=10s nginx:alpine
 ```
+
+<img width="1207" height="128" alt="{34AB558D-10AD-487B-B3C7-D8375A3C2745}" src="https://github.com/user-attachments/assets/2da17ad9-d79f-47b5-9444-70e262bd1360" />
